@@ -10,7 +10,9 @@ add_library(
 target_include_directories(
     ${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
-
+target_compile_options(
+    ${PROJECT_NAME} PUBLIC -fpic
+)
 # file(
 #     COPY "${CMAKE_CURRENT_SOURCE_DIR}/include"
 #     DESTINATION "${CMAKE_CURRENT_BINARY_DIR}"
